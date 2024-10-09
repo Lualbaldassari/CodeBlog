@@ -1,277 +1,118 @@
-/* ========================= */
-/* Reset de estilos básicos */
-/* ========================= */
 * {
-  padding: 0;
   margin: 0;
-  text-decoration: none;
-  list-style: none;
+  padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  line-height: 1.6;
 }
 
-/* ========================= */
-/* Tipografía General */
-/* ========================= */
-body {
-  font-family: montserrat, sans-serif;
+/* CSS DE LA NAV-BAR INICIO*/
+
+.header {
+  background:  #8697c4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 85px;
+  padding: 5px 10%;
 }
 
-/* ========================= */
-/* Estilos del NAVBAR */
-/* ========================= */
 
-/* Contenedor del Navbar */
-nav {
-  background: #F7E9E6;
-  height: 80px;
-  width: 100%;
+
+.header .logo {
+  cursor: pointer;
+  margin-right: auto;
+  
 }
 
-/* Logo en el Navbar */
-label.logo {
-  color: #1F2935;
-  font-size: 35px;
-  line-height: 80px;
-  padding: 0 100px;
-  font-weight: bold;
-  float: left;
+.header .logo {
+    height: 30px;
+    width: auto;
+    transition: all 0.3s;
 }
 
-/* Lista de navegación */
-nav ul {
-  float: right;
-  margin-right: 20px;
+
+.header .logo:hover{
+  transform: scale(1.2);
 }
 
-/* Elementos de la lista de navegación */
-nav ul li {
+.header  .nav-links a {
+  text-decoration: none;
+  color: #F7E9E6;
+  font-size: 700;
+}
+
+
+.header .nav-links li {
   display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
+  padding: 0 20px;
 }
 
-/* Enlaces de navegación */
-nav ul li a {
-  color: #1F2935;
-  font-size: 17px;
-  text-transform: uppercase;
-  padding: 7px 13px;
-  border-radius: 10px;
+.header .nav-links li:hover{
+  transform: scale(1.1);
+  
 }
 
-/* Efecto hover en enlaces */
-a:hover {
-  background: #1F2935;
-  color: #F7E9E6;
-  transition: 0.5s;
-}
-
-/* ========================= */
-/* Botón  */
-/* ========================= */
-
-/* Ocultar el botón  por defecto */
-.checkbtn {
-  display: none;
-  font-size: 30px;
-  color: #1F2935;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
+#menu-icon {
   cursor: pointer;
-}
-
-/* Checkbox para controlar el menú */
-#check {
   display: none;
 }
 
-/* ========================= */
-/* Media Queries para NAVBAR */
-/* ========================= */
-
-/* Estilos para pantallas con ancho máximo de 952px */
-@media (max-width: 952px) {
-  /* Ajustes del logo */
-  label.logo {
-    font-size: 30px;
-    padding-left: 50px;
+@media (max-width: 1280px){
+  .header {
+    padding: 14px 2%;
+    transition: .2s;
   }
 
-  /* Ajustes de los enlaces de navegación */
-  nav ul li a {
-    font-size: 16px;
+  .nav-links a{
+    padding: 5px 0;
+    margin:  0px 20px;
   }
+
 }
 
-/* Estilos para pantallas con ancho máximo de 858px */
-@media (max-width: 858px) {
-  /* Mostrar el botón hamburguesa en pantallas pequeñas */
-  .checkbtn {
+
+
+@media (max-width: 1090px){
+  #menu-icon {
     display: block;
   }
-
-  /* Estilos del menú desplegable */
-  nav ul {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #F7E9E6;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all 0.5s;
+  .menu{
+    position: absolute;
+    border: 1px solid black;
+    top:10%;
+    right: -100%;
+    width:270px;
+    height: 29vh;
+    background: #8697c4;
+    border-radius: 30px;
+    transition: all .50s ease;
   }
 
-  /* Elementos del menú desplegable */
-  nav ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-
-  /* Enlaces del menú desplegable */
-  nav ul li a {
-    font-size: 20px;
-  }
-
-  /* Efectos hover y activo en enlaces del menú */
-  a:hover,
-  a.active {
-    background: #1F2935;
-    color: #F7E9E6;
-    transition: 0.5s;
-  }
-
-  /* Muestra el menú al hacer clic en el botón hamburguesa */
-  #check:checked ~ ul {
-    left: 0;
-  }
-}
-
-/* ========================= */
-/* SECCIÓN HERO */
-/* ========================= */
-
-/* Contenedor principal de la sección Hero */
-.hero {
-  display: flex;
-  align-items: center;
-  padding: 50px;
-  margin: 100px;
-  gap: 50px;
-}
-
-/* Contenedor de la imagen en la sección Hero */
-.hero-image {
-  flex: 1;
-}
-
-/* Imagen dentro de la sección Hero */
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Contenedor de texto en la sección Hero */
-.hero-text-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  border-radius: 15px;
-  padding: 20px;
-  background-color: #F7E9E6;
-}
-
-/* Título en la sección Hero */
-.hero-text h1 {
-  font-size: 3em; /* Tamaño aumentado */
-  margin-bottom: 20px;
+  .menu a:hover{
   color: #1F2935;
 }
 
-/* Párrafo en la sección Hero */
-.hero-text p {
-  font-size: 1.5em; /* Tamaño aumentado */
-  margin-bottom: 30px;
-  color: #1F2935;
-}
 
-/* ========================= */
-/* Formulario en la sección Hero */
-/* ========================= */
 
-/* Contenedor del formulario */
-.hero-form form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Campos de entrada y botón del formulario */
-.hero-form input[type="email"],
-.hero-form button {
-  width: 100%;
-  max-width: 400px;
-  padding: 15px;
-  font-size: 1em;
-  border-radius: 25px; /* Bordes redondeados */
-  box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho total */
-}
-
-/* Estilos específicos para el campo de entrada */
-.hero-form input[type="email"] {
-  border: 1px solid #ccc;
-}
-
-/* Estilos específicos para el botón */
-.hero-form button {
-  background-color: #1F2935;
-  color: #F7E9E6;
-  border: none;
-  width: 200px;
-  cursor: pointer;
-}
-
-/* Efecto hover en el botón */
-.hero-form button:hover {
-  background-color: #F7E9E6;
-  color: #1F2935;
-  border: 1px solid #1F2935;
-  transition: 0.3s;
-}
-
-/* ========================= */
-/* Media Queries para SECCIÓN HERO */
-/* ========================= */
-
-/* Estilos para pantallas con ancho máximo de 768px */
-@media (max-width: 768px) {
-  /* Ajustes del contenedor principal */
-  .hero {
+  .nav-links{
+    margin-top: 20px;
+    display: flex;
     flex-direction: column;
-    text-align: center;
-    margin: 50px;
-    padding: 20px;
+    justify-content: flex-start;
+
   }
 
-  /* Ajustes de la imagen */
-  .hero-image {
-    margin-bottom: 20px;
+  .nav-links a{
+    margin-left: 10px;
+    padding: 0px 25px;
   }
 
-  /* Ajustes del contenedor de texto */
-  .hero-text-container {
-    border-radius: 15px;
-    padding: 20px;
+  .menu.show{
+     right: 2%;
   }
 
-  /* Ajustes de los campos de entrada y botón */
-  .hero-form input[type="email"],
-  .hero-form button {
-    max-width: none; /* Permitir que ocupen todo el ancho en móvil */
-  }
 }
+
+/* CSS DE LA NAV-BAR FIN*/
