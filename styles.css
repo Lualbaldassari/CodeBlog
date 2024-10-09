@@ -105,46 +105,86 @@
 /* CSS DE LA SECCION PRINCIPAL INICIO*/
 
 .principal-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("assets/luca-bravo-XJXWbfSo2f0-unsplash.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.principal-container::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+
+/* .principal-container {
+    width: 100%;
+    height: 850px;
+    background: url("assets/luca-bravo-XJXWbfSo2f0-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+} */
+
+
+/* .principal-container {
     max-width: 1100px;
     background-color: #f8fafe;
     border-radius: 10px;
     margin: 1px auto;
     padding: 70px 60px;
-}
+} */
 
 .hero-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+
+/* .hero-section {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 30px;
-}
+} */
 
 .info-text {
     flex: 1;
-    background-color: #8697C4;
     border-radius: 8px;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    border: 1px solid black;
 }
 
 .info-text h4 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #28293b;
+    color: #fff;
 }
 
 .info-text h1 {
     font-size: 4rem;
-    color: #FFF;
+    color: #ffffff;
     padding: 20px 0;
 }
 
 .info-text p {
     font-size: 1.2rem;
-    color: #28293b;
+    color: #fff;
 }
 
 .info-text .btn {
