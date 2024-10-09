@@ -11,7 +11,7 @@
 /* CSS DE LA NAV-BAR INICIO*/
 
 .header {
-    background: #8697c4;
+    background: black;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -108,7 +108,7 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url("assets/luca-bravo-XJXWbfSo2f0-unsplash.jpg");
+    background-image: url("assets/glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -195,9 +195,12 @@
 }
 
 .info-text .btn:hover {
-    background: #8697c4;
+    background: grey;
     color: white;
 }
+
+
+/* CSS DE LA SECCION PRINCIPAL INICIO- ICONOS*/
 
 .info-icons {
     color: #fff;
@@ -224,3 +227,6 @@
     font-size: 1.2rem;
     text-align: center;
 }
+
+
+/* CSS DE LA SECCION PRINCIPAL FIN*/
