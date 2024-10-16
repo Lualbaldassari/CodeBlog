@@ -1,0 +1,33 @@
+.imagen{
+    width: 100%;height: 200px;
+}
+.contenedor-imagenes{
+    position: relative;
+}
+.imagen-superior{
+    position: absolute;
+  top: 120px; /* Ajusta la distancia al borde superior */
+  left: 50%;
+  transform: translateX(-50%); /* Centra horizontalmente la imagen */
+  width: 400px; height: 400px;
+}
+.texto {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: white;
+    font-size: 42px;
+    text-align: center;
+  }
+  .texto2{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: white;
+    font-size: 24px;
+    text-align: center;
+  .texto3{
+  justify-content: center;
+}
