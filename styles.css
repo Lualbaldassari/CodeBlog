@@ -193,49 +193,78 @@ body {
 }
 
 
-/* Responsiveness */
+/* Sección de Cursos Gratuitos */
+
+.crash-courses-section {
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #121212;
+}
+
+.crash-courses-section h2 {
+    color: #2980b9;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.crash-courses-section p {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.crash-courses-section a.youtube-link {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.crash-courses-section a.youtube-link:hover {
+    text-decoration: underline;
+}
+
+.crash-courses-section .courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.course-item {
+    display: block;
+    width: calc(25% - 20px);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.course-item:hover {
+    transform: scale(1.05);
+}
+
+.course-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
 
 @media (max-width: 768px) {
-    .info-text h1 {
-        font-size: 2.5rem;
+    .crash-courses-section .courses-container {
+        gap: 15px;
     }
-    .info-text h4 {
-        font-size: 1.8rem;
-    }
-    .info-icons {
-        flex-direction: column;
-        gap: 20px;
-    }
-    .info-icons .icon i {
-        font-size: 2.5rem;
-    }
-    .info-icons h3 {
-        font-size: 1.6rem;
-    }
-    .info-icons p {
-        font-size: 1rem;
+    .course-item {
+        width: calc(33.333% - 15px);
     }
 }
 
 @media (max-width: 480px) {
-    .info-text h1 {
-        font-size: 2rem;
+    .crash-courses-section .courses-container {
+        gap: 10px;
     }
-    .info-text h4 {
-        font-size: 1.5rem;
-    }
-    .info-icons {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .info-icons .icon i {
-        font-size: 2rem;
-    }
-    .info-icons h3 {
-        font-size: 1.4rem;
-    }
-    .info-icons p {
-        font-size: 0.9rem;
+    .course-item {
+        width: calc(50% - 10px);
     }
 }
 
@@ -305,58 +334,6 @@ body {
     height: 50px;
     margin: 15px auto;
     display: block;
-}
-
-
-/* Sección de Cursos Gratuitos */
-
-.crash-courses-section {
-    padding: 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #121212;
-}
-
-.crash-courses-section h2 {
-    color: #2980b9;
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.crash-courses-section p {
-    color: #ffffff;
-    margin-bottom: 30px;
-}
-
-.crash-courses-section a.youtube-link {
-    color: #2980b9;
-    text-decoration: none;
-}
-
-.courses-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.course-item {
-    display: block;
-    width: calc(25% - 20px);
-    text-decoration: none;
-    transition: transform 0.3s ease;
-}
-
-.course-item:hover {
-    transform: scale(1.05);
-}
-
-.course-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 
@@ -481,7 +458,7 @@ body {
 .social-proof-section {
     padding: 50px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 50px auto;
     text-align: center;
     background-color: #121212;
     color: #fff;
@@ -499,6 +476,8 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    padding: 0 20px;
+    /* Añadido para evitar que los botones queden pegados */
 }
 
 .carousel-track {
@@ -514,16 +493,26 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     color: #fff;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-item p {
     font-size: 1.2rem;
     margin-bottom: 10px;
+    word-wrap: break-word;
+    /* Evita el desbordamiento de palabras largas */
+    padding: 0 10px;
+    /* Añade padding para evitar que el texto toque los bordes */
 }
 
 .carousel-item h3 {
     font-size: 1rem;
     color: #aaa;
+    word-wrap: break-word;
+    padding: 0 10px;
 }
 
 .avatar {
@@ -556,6 +545,34 @@ body {
 
 .carousel-button:hover {
     color: #00aaff;
+}
+
+@media (max-width: 768px) {
+    .carousel-item p {
+        font-size: 1rem;
+    }
+    .carousel-item h3 {
+        font-size: 0.9rem;
+    }
+    .avatar {
+        width: 60px;
+        height: 60px;
+    }
+    .carousel-button {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item p {
+        font-size: 0.9rem;
+    }
+    .carousel-item h3 {
+        font-size: 0.8rem;
+    }
+    .carousel-button {
+        font-size: 1.2rem;
+    }
 }
 
 
